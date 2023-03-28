@@ -10,8 +10,6 @@
   <arg name="gazebo_gui" default="true"/>
   <arg name="checkTerrainConn" default="true"/>
 
-  <include file="$(find ps3joy)/launch/ps3.launch" />
-
   <include file="$(find local_planner)/launch/local_planner.launch" >
     <arg name="cameraOffsetZ" value="$(arg cameraOffsetZ)"/>
     <arg name="goalX" value="$(arg vehicleX)"/>
@@ -37,10 +35,5 @@
 
   <include file="$(find sensor_scan_generation)/launch/sensor_scan_generation.launch" />
 
-  <include file="$(find visualization_tools)/launch/visualization_tools.launch" >
-    <arg name="world_name" value="$(arg world_name)"/>
-  </include>
-
-  <node launch-prefix="nice" pkg="rviz" type="rviz" name="rvizGA" args="-d $(find vehicle_simulator)/rviz/vehicle_simulator.rviz" respawn="true"/>
 
 </launch>

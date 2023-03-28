@@ -35,6 +35,48 @@
       <real_time_update_rate>1000</real_time_update_rate>
       <gravity>0 0 -9.8</gravity>
     </physics>
+    
+    <actor name="actor1">
+  	<pose>0 0 0 0 0 0</pose>
+  	<skin>
+    		<filename>walk.dae</filename>
+    		<scale>1.0</scale>
+  	</skin>
+  	<animation name="walking">
+    		<filename>walk.dae</filename>
+    		<scale>1.000000</scale>
+    		<interpolate_x>true</interpolate_x>
+  	</animation>
+  	<script>
+  	<loop>false</loop>
+        <trajectory id="0" type="walking">
+          <waypoint>
+            <time>1</time>
+            <pose>23 7 0 0 0 -1.57</pose>
+          </waypoint>
+          <waypoint>
+            <time>5</time>
+            <pose>23 0 0 0 0 0</pose>
+          </waypoint>
+          <waypoint>
+            <time>15</time>
+            <pose>32 0 0 0 0 -1.57</pose>
+          </waypoint>
+          <waypoint>
+            <time>25</time>
+            <pose>32 -7 0 0 0 0</pose>
+          </waypoint>
+          <waypoint>
+            <time>35</time>
+            <pose>42 -7 0 0 0 -1.57</pose>
+          </waypoint>
+          <waypoint>
+            <time>50</time>
+            <pose>43 -25 0 0 0 0</pose>
+          </waypoint>
+        </trajectory>
+      </script>
+     </actor>
      
      <model name='person_standing'>
       <link name='link'>
@@ -104,55 +146,8 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>43 -25 0 0 0 0</pose>
+      <pose>43.55834 -25.6005 0 0 -0 0</pose>
     </model>
      
-    <model name='door'>
-    <link name='link'>
-        <inertial>
-          <mass>1</mass>
-          <inertia>
-            <ixx>0.166667</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>0.166667</iyy>
-            <iyz>0</iyz>
-            <izz>0.166667</izz>
-          </inertia>
-        </inertial>
-        <self_collide>0</self_collide>
-        <enable_wind>0</enable_wind>
-        <kinematic>0</kinematic>
-        <gravity>0</gravity>
-        <visual name='visual'>
-          <geometry>
-            <box>
-              <size>2.5 0.2 3</size>
-            </box>
-          </geometry>
-          <material>
-            <script>
-              <name>Gazebo/Yellow</name>
-              <uri>file://media/materials/scripts/gazebo.material</uri>
-            </script>
-          </material>
-          <transparency>0</transparency>
-          <cast_shadows>1</cast_shadows>
-        </visual>
-        <collision name='collision'>
-          <laser_retro>0</laser_retro>
-          <max_contacts>10</max_contacts>
-          <geometry>
-            <box>
-              <size>2.5 0.2 3</size>
-            </box>
-          </geometry>
-        </collision>
-      </link>
-      <static>0</static>
-      <allow_auto_disable>1</allow_auto_disable>
-      <pose>43 -9 1.6 0 -0 0</pose>
-    </model>
-    
   </world>
 </sdf>
