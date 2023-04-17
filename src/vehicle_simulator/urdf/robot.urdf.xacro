@@ -144,5 +144,8 @@
   <xacro:gazebo_material ref="left_rear_wheel"   color="Black" />
   <xacro:gazebo_material ref="right_front_wheel" color="Black" />
   <xacro:gazebo_material ref="right_rear_wheel"  color="Black" />
-
+  
+  <gazebo reference="base_origin">
+    <turnGravityOff>true</turnGravityOff>
+  </gazebo>
 </robot>
