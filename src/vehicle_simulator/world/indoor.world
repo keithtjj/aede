@@ -154,7 +154,7 @@
       </link>
       <static>0</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose>85.3206 -3.84133 1.6 0 -0 0</pose>
+      <pose>84.7002 -4.0782 1.6 0 -0 0</pose>
     </model>
     
     <model name='door3'>
@@ -273,7 +273,7 @@
       </link>
       <static>0</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose>55.7198 57.2398 1.57 0.0 -0.0 0.0</pose>
+      <pose>56.0513 57.0117 1.57 0.0 -0.0 0.0</pose>
     </model>
     
   </world>
