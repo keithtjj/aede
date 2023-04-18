@@ -178,7 +178,7 @@
         <visual name='visual'>
           <geometry>
             <box>
-              <size>4 0.2 3</size>
+              <size>3.3 0.2 3</size>
             </box>
           </geometry>
           <material>
@@ -195,7 +195,7 @@
           <max_contacts>10</max_contacts>
           <geometry>
             <box>
-              <size>4 0.2 3</size>
+              <size>3.3 0.2 3</size>
             </box>
           </geometry>
           <surface>
@@ -214,7 +214,7 @@
       </link>
       <static>0</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose>24.6738 24.6352 1.6 0 0 -1.57 </pose>
+      <pose>9.94 -2 1.6 0 0 0 </pose>
     </model>
     <model name='door4'>
       <link name='link'>
@@ -275,6 +275,38 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose>56.0513 57.0117 1.57 0.0 -0.0 0.0</pose>
     </model>
+    
+    <actor name="actor1">
+  	<pose>0 0 0 0 0 0</pose>
+  	<skin>
+    	  <filename>walk.dae</filename>
+  	</skin>
+  	<animation name="walking">
+    	  <filename>walk.dae</filename>
+    	  <interpolate_x>true</interpolate_x>
+  	</animation>
+  	<script>
+  	<loop>true</loop>
+        <trajectory id="0" type="walking">
+          <waypoint>
+            <time>0</time>
+            <pose>2 44 0 0 0 0.43</pose>
+          </waypoint>
+          <waypoint>
+            <time>16</time>
+            <pose>12 45 0 0 0 -1.57</pose>
+          </waypoint>
+          <waypoint>
+            <time>27</time>
+            <pose>12 40 0 0 0 -3.57</pose>
+          </waypoint>
+          <waypoint>
+            <time>43</time>
+            <pose>2 44 0 0 0 0.43</pose>
+          </waypoint>
+        </trajectory>
+      </script>
+     </actor>
     
   </world>
 </sdf>
