@@ -34,6 +34,9 @@
   </include>
 
   <include file="$(find sensor_scan_generation)/launch/sensor_scan_generation.launch" />
-
+  
+  <include file="$(find visualization_tools)/launch/visualization_tools.launch" >
+    <arg name="world_name" value="$(arg world_name)"/>
+  </include>
 
 </launch>
